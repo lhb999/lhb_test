@@ -153,7 +153,7 @@ object test02 {
           outFunc(str)
           arr.clear()
           if(arr.isEmpty) {
-            arr.+=
+            arr.+=("0")
           }
           arr.+=(sam.qname, sam.flag)
         }
