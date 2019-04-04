@@ -137,6 +137,7 @@ object test02 {
     val res = (list, cnt)
     res
   } // SBL
+
   def readFirst3(path:String, prefix:String = "ERR000954",firstQname:String = "ERR000954.1",outFunc: String => Unit = println) = {//SBL
     var arr = new mutable.ArrayBuffer[String]()
     var lastQname = firstQname
@@ -151,6 +152,9 @@ object test02 {
           val str = arr.mkString("\t")
           outFunc(str)
           arr.clear()
+          if(arr.isEmpty) {
+            arr.+=
+          }
           arr.+=(sam.qname, sam.flag)
         }
         else if(lastQname == sam.qname) {
